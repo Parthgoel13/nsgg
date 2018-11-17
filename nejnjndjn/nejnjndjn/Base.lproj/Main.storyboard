@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--LeagueVC-->
         <scene sceneID="WU6-6P-RT1">
             <objects>
-                <viewController id="mes-Qm-89z" sceneMemberID="viewController">
+                <viewController id="mes-Qm-89z" customClass="LeagueVC" customModule="nejnjndjn" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w86-JE-OT5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -88,7 +88,7 @@
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="uGq-4p-j1K" kind="show" id="piG-4q-HbE"/>
+                                    <action selector="changeVcTapped:" destination="mes-Qm-89z" eventType="touchUpInside" id="aIb-4L-azi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rZ9-gq-nhY">
@@ -98,9 +98,6 @@
                                     <constraint firstAttribute="height" constant="60" id="WZ7-zi-oHb"/>
                                 </constraints>
                                 <state key="normal" image="backButton"/>
-                                <connections>
-                                    <segue destination="WZ4-VQ-Y2a" kind="unwind" unwindAction="unwindfromSkillVCWithUnwindSegue:" id="rUJ-rY-yiX"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -123,16 +120,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qIT-SG-tk1"/>
                     </view>
+                    <connections>
+                        <segue destination="uGq-4p-j1K" kind="show" identifier="SkillVCSegue" id="sLd-QE-CL5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="piL-Mh-bWc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="WZ4-VQ-Y2a" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="969.56521739130437" y="-202.23214285714286"/>
         </scene>
-        <!--View Controller-->
+        <!--SkillVC-->
         <scene sceneID="MNW-0T-kmg">
             <objects>
-                <viewController id="uGq-4p-j1K" sceneMemberID="viewController">
+                <viewController id="uGq-4p-j1K" customClass="SkillVC" customModule="nejnjndjn" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GUX-D7-HyE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -206,9 +205,6 @@
                                     <constraint firstAttribute="width" constant="60" id="k2e-Ah-7Ma"/>
                                 </constraints>
                                 <state key="normal" image="backButton"/>
-                                <connections>
-                                    <segue destination="D12-yQ-z5h" kind="unwind" unwindAction="unwindfromSkillVCWithUnwindSegue:" id="jBf-0s-wJJ"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -232,14 +228,13 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L7Q-wP-Dy2" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="D12-yQ-z5h" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1647.826086956522" y="-202.23214285714286"/>
         </scene>
-        <!--View Controller-->
+        <!--WelcomeVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="nejnjndjn" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WelcomeVC" customModule="nejnjndjn" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -248,16 +243,16 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="swooshLogo" translatesAutoresizingMaskIntoConstraints="NO" id="2na-Vy-bgW">
-                                <rect key="frame" x="147.5" y="88" width="119" height="20"/>
+                                <rect key="frame" x="147.5" y="64" width="119" height="20"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="GOING ALL IN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="suC-m9-3CP">
-                                <rect key="frame" x="56.5" y="219" width="301" height="60.5"/>
+                                <rect key="frame" x="56.5" y="195" width="301" height="60.5"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="44"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="ON GOING ALL OUT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lNt-YK-uYo">
-                                <rect key="frame" x="56.5" y="273" width="301" height="40"/>
+                                <rect key="frame" x="56.5" y="249" width="301" height="40"/>
                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="29"/>
                                 <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -277,7 +272,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Find a team in your city and dominate the league" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZ1-dB-ouc">
-                                <rect key="frame" x="56.5" y="385" width="301" height="57.5"/>
+                                <rect key="frame" x="56.5" y="344" width="301" height="57.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="301" id="Nrk-Lm-Q7Z"/>
                                 </constraints>
