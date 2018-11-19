@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "nejnjndjn/Controller/LeagueVC.swift"
-            timestampString = "564140731.504764"
+            timestampString = "564335049.713053"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
             landmarkName = "changeVcTapped(_:)"
             landmarkType = "7">
          </BreakpointContent>
